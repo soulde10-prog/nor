@@ -1,0 +1,167 @@
+/* === Full-window App Look === */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;            /* let it grow with content */
+  min-width: 600px;
+  min-height: 700px;
+  font-family: Arial, sans-serif;
+  background: #E9CFEC;
+  color: #333;
+  overflow-y: auto;        /* enable vertical scrolling */
+  overflow-x: hidden;      /* prevent horizontal scroll */
+}
+
+/* Main popup container */
+#popup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  height: auto;            /* auto adjust to content */
+  padding: 1.2rem;
+  box-sizing: border-box;
+}
+
+
+/* Header bar */
+#popup-header {
+  background: #007bff;
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-bottom: 0.6rem;
+  user-select: none;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  margin-top: 0.4rem;
+  display: block;
+  font-size: 14px;
+  color: #222;
+}
+
+/* Input + button row */
+.field {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.field input[type="text"],
+input[type="text"],
+select {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #728FCE;
+  color: Night;
+  box-sizing: border-box;
+}
+
+/* === Primary Buttons (default) === */
+button {
+  display: inline-block;
+  margin: 2px 0;
+  padding: 6px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background: #007bff; /* blue */
+  color: white;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* === Secondary Buttons (claim actions) === */
+button.secondary {
+  background: #28a745; /* green */
+}
+
+button.secondary:hover {
+  background: #1e7e34;
+}
+
+/* === Warning Buttons (validate actions) === */
+button.warning {
+  background: #fd7e14; /* orange */
+}
+
+button.warning:hover {
+  background: #e56700;
+}
+
+/* Log areas */
+#logVerified,
+#logFailed {
+  max-height: 150px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  padding: 6px;
+  border: 1px solid #ddd;
+  margin-top: 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.entry {
+  padding: 2px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  #popup {
+    padding: 1rem;
+  }
+  .field {
+    flex-direction: column;
+  }
+  .field button {
+    width: 100%;
+  }
+}
+/* Status message box */
+#statusMessage {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  min-height: 20px;
+  transition: opacity 0.3s ease;
+}
+
+#statusMessage.success {
+  color: green;
+}
+
+#statusMessage.error {
+  color: red;
+}
+/* ... your existing styles ... */
+
+button.primary {
+  background: #6f42c1; /* purple-ish for main action */
+}
+
+button.primary:hover {
+  background: #5a32a3;
+}

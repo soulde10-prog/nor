@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SA ID Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="popup">
+    <div id="statusMessage"></div>
+    <div id="popup-header">Soulenchanter ID Generator</div>
+
+    <details open>
+      <summary>Generators</summary>
+
+      <label>Name</label>
+      <div class="field"><input type="text" id="genName" readonly><button id="btnName">Gen</button></div>
+
+      <label>Surname</label>
+      <div class="field"><input type="text" id="genSurname" readonly><button id="btnSurname">Gen</button></div>
+
+      <label>Phone Number</label>
+      <div class="field"><input type="text" id="genNumber" readonly><button id="btnNumber">Gen</button></div>
+
+      <label>Username</label>
+      <div class="field"><input type="text" id="genUsername" readonly><button id="btnUsername">Gen</button></div>
+
+      <label>Password</label>
+      <div class="field"><input type="text" id="genPassword" readonly><button id="btnPassword">Gen</button></div>
+
+      <label>Email</label>
+      <div class="field"><input type="text" id="genEmail" readonly><button id="btnEmail">Gen</button></div>
+
+      <label>Country</label>
+      <div class="field"><input type="text" value="South Africa" id="countrySelectorButton" readonly></div>
+
+      <label>Verified ID</label>
+      <div class="field">
+        <input type="text" id="genID" readonly>
+        <button id="btnID">Gen</button>
+        <button id="btnT">T</button>
+        <button id="btnValidateID" class="warning">Validate</button>
+        <input type="text" id="genStatus" readonly>
+      </div>
+
+      <button id="genAndFillLottoStar" class="secondary">Gen & Fill LottoStar</button>
+      <button id="fillHollywoodbets" class="warning">Fill Hollywoodbets (ID + Names)</button>
+      <button id="autoFillCurrentSite" class="primary">Auto-Fill Selected Site</button>
+
+    </details>
+
+    <label for="siteSelector">Target Site</label>
+    <select id="siteSelector">
+      <option value="lottostar">LottoStar</option>
+      <option value="hollywoodbets">Hollywoodbets</option>
+    </select>
+
+    <label for="tabSelect">Destination Tab</label>
+    <select id="tabSelect"></select>
+
+    <!-- Claim 2 section (unchanged) -->
+    <label>Claim 2 Min Amount</label>
+    <div class="field">
+      <input type="text" id="claim2AMOUNT" placeholder="e.g. 5.00">
+      <button id="BNclaim2Set">Set</button>
+      <button id="claim2SetBN">Set Position</button>
+      <button id="BNclaim2Inject" class="secondary">Inject</button>
+    </div>
+
+    <label>Toggle Injected Scripts</label>
+    <div class="field">
+      <label><input type="checkbox" id="toggleClaim2"> Claim 2 Active</label>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

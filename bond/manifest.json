@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "SA ID Generator",
+  "version": "4.5",
+  "description": "SA ID Generator with Claim Controls & Site Autofill",
+  "action": {
+    "default_title": "Open SA ID Generator"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "incognito": "spanning",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
